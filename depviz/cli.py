@@ -9,6 +9,7 @@ from .repository import JsonTestRepository, MavenRepository, RepositoryError
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Визуализатор зависимостей Maven")
     parser.add_argument("--config", default="config.ini", help="путь к INI-конфигурации")
+    parser.add_argument("--reverse", metavar="PACKAGE", help="найти обратные зависимости узла")
     args = parser.parse_args(argv)
     try:
         config = load_config(args.config)
@@ -21,6 +22,10 @@ def main(argv=None):
     for dependency in dependencies:
         print(f"- {dependency}")
     print(f"\nПакетов в графе: {len(graph.nodes)}")
+    if args.reverse:
+        reverse = graph.reverse_dependencies(args.reverse) if args.reverse in graph.nodes else []
+        print(f"\nПакеты, зависящие от {args.reverse}:")
+        print("\n".join(f"- {name}" for name in reverse) if reverse else "(не найдены)")
     print("Рёбра:")
     for parent, children in graph.edges.items():
         for child in children:

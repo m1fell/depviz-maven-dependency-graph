@@ -15,6 +15,24 @@ class DependencyGraph:
     def nodes(self):
         return set(self.edges)
 
+    def reverse_dependencies(self, package: str) -> list[str]:
+        """Найти BFS-обходом узлы, зависящие от указанного пакета."""
+        reverse: dict[str, list[str]] = {node: [] for node in self.edges}
+        for parent, children in self.edges.items():
+            for child in children:
+                reverse.setdefault(child, []).append(parent)
+        found: list[str] = []
+        visited = {package}
+        queue = deque([package])
+        while queue:
+            current = queue.popleft()
+            for parent in reverse.get(current, []):
+                if parent not in visited:
+                    visited.add(parent)
+                    found.append(parent)
+                    queue.append(parent)
+        return found
+
 
 def build_graph(repository: DependencyRepository, root: str, filter_substring: str = "") -> DependencyGraph:
     if filter_substring and filter_substring in root:
