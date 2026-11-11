@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eu
+PROJECT_DIR=$(CDPATH= cd "$(dirname "$0")" && pwd)
+PYTHONPATH="$PROJECT_DIR/src${PYTHONPATH:+:$PYTHONPATH}"
+export PYTHONPATH
+exec python3 -m depviz "$@"

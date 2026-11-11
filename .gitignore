@@ -6,5 +6,7 @@ venv/
 dist/
 build/
 *.egg-info/
-.idea/
 output/
+
+
+.idea/

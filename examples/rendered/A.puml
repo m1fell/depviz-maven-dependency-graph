@@ -1,0 +1,23 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+"A" as n0
+"B" as n1
+"C" as n2
+"D" as n3
+"E" as n4
+"F" as n5
+"G" as n6
+"H" as n7
+n0 --> n1
+n0 --> n2
+n1 --> n3
+n1 --> n4
+n2 --> n4
+n2 --> n5
+n3 --> n6
+n4 --> n6
+n4 --> n7
+n5 --> n7
+n6 --> n1
+@enduml

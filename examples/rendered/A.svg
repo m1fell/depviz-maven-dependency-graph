@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="954" height="273" viewBox="0 0 954 273" role="img">
+<title>Граф зависимостей пакета A</title>
+<defs>
+<pattern id="grid" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.8" fill="#d5e2f2"/></pattern>
+<linearGradient id="root-fill"><stop stop-color="#355ca8"/><stop offset="1" stop-color="#287e9a"/></linearGradient>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#45699e"/></marker>
+<marker id="return-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#d97706"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#f7faff"/>
+<rect width="100%" height="100%" fill="url(#grid)"/>
+<path d="M 202 67 C 237 67, 237 67, 272 67" fill="none" stroke="#45699e" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 202 67 C 237 67, 237 143, 272 143" fill="none" stroke="#45699e" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 442 67 C 477 67, 477 67, 512 67" fill="none" stroke="#45699e" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 442 67 C 477 67, 477 143, 512 143" fill="none" stroke="#45699e" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 442 143 C 477 143, 477 143, 512 143" fill="none" stroke="#45699e" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 442 143 C 477 143, 477 219, 512 219" fill="none" stroke="#45699e" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 682 67 C 717 67, 717 67, 752 67" fill="none" stroke="#45699e" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 682 143 C 717 143, 717 67, 752 67" fill="none" stroke="#45699e" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 682 143 C 717 143, 717 143, 752 143" fill="none" stroke="#45699e" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 682 219 C 717 219, 717 143, 752 143" fill="none" stroke="#45699e" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M 849 43 C 902 1, 292 1, 345 43" fill="none" stroke="#d97706" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#return-arrow)"/>
+<g><title>A</title>
+<rect x="32" y="43" width="170" height="48" rx="11" fill="url(#root-fill)" stroke="#355ca8" stroke-width="1.5"/>
+<text x="117" y="72" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">A</text></g>
+<g><title>B</title>
+<rect x="272" y="43" width="170" height="48" rx="11" fill="#ffffff" stroke="#91acd1" stroke-width="1.5"/>
+<text x="357" y="72" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#213a67">B</text></g>
+<g><title>C</title>
+<rect x="272" y="119" width="170" height="48" rx="11" fill="#ffffff" stroke="#91acd1" stroke-width="1.5"/>
+<text x="357" y="148" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#213a67">C</text></g>
+<g><title>D</title>
+<rect x="512" y="43" width="170" height="48" rx="11" fill="#ffffff" stroke="#91acd1" stroke-width="1.5"/>
+<text x="597" y="72" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#213a67">D</text></g>
+<g><title>E</title>
+<rect x="512" y="119" width="170" height="48" rx="11" fill="#ffffff" stroke="#91acd1" stroke-width="1.5"/>
+<text x="597" y="148" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#213a67">E</text></g>
+<g><title>F</title>
+<rect x="512" y="195" width="170" height="48" rx="11" fill="#ffffff" stroke="#91acd1" stroke-width="1.5"/>
+<text x="597" y="224" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#213a67">F</text></g>
+<g><title>G</title>
+<rect x="752" y="43" width="170" height="48" rx="11" fill="#ffffff" stroke="#91acd1" stroke-width="1.5"/>
+<text x="837" y="72" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#213a67">G</text></g>
+<g><title>H</title>
+<rect x="752" y="119" width="170" height="48" rx="11" fill="#ffffff" stroke="#91acd1" stroke-width="1.5"/>
+<text x="837" y="148" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="700" fill="#213a67">H</text></g>
+</svg>

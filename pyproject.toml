@@ -5,13 +5,17 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "depviz"
 version = "1.0.0"
-description = "Учебный CLI-инструмент для анализа и визуализации графа зависимостей Maven"
+description = "Учебный HTTP API для анализа и визуализации графа зависимостей Maven"
 requires-python = ">=3.10"
 dependencies = []
 
 [project.scripts]
 depviz = "depviz.cli:main"
 
+[tool.setuptools]
+package-dir = {"" = "src"}
+
 [tool.setuptools.packages.find]
+where = ["src"]
 include = ["depviz*"]
 
