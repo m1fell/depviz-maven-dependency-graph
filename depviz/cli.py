@@ -1,7 +1,8 @@
-"""Этап 1: загрузка настроек из INI и вывод их значений."""
+"""Этап 2: получение прямых зависимостей из POM Maven."""
 
 import argparse
 from .config import ConfigError, load_config
+from .repository import JsonTestRepository, MavenRepository, RepositoryError
 
 
 def main(argv=None):
@@ -10,13 +11,13 @@ def main(argv=None):
     args = parser.parse_args(argv)
     try:
         config = load_config(args.config)
-    except ConfigError as exc:
+        repository = JsonTestRepository(config.test_repository) if config.test_mode else MavenRepository(config.repository_url)
+        dependencies = repository.dependencies(config.package)
+    except (ConfigError, RepositoryError) as exc:
         parser.error(str(exc))
-    print("Параметры конфигурации:")
-    print(f"package = {config.package}")
-    print(f"repository_url = {config.repository_url}")
-    print(f"test_mode = {str(config.test_mode).lower()}")
-    print(f"test_repository = {config.test_repository}")
-    print(f"filter_substring = {config.filter_substring}")
-    print(f"output_dir = {config.output_dir}")
+    print(f"Прямые зависимости {config.package}:")
+    for dependency in dependencies:
+        print(f"- {dependency}")
+    if not dependencies:
+        print("(нет прямых зависимостей)")
     return 0
